@@ -25,7 +25,8 @@ export class ContactListComponent implements OnInit {
     }
 
     fetchChars() {
-        this.myService.fetchCharacters().then( (charactersList) => {
+        this.myService.fetchCharacters()
+        .then( (charactersList) => {
                 this.contacts = charactersList;
             })
             .catch((err) => {
