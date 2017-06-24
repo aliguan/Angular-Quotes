@@ -14,6 +14,8 @@ import { CountersComponent } from './counters/counters.component';
 import { ChuckNorrisPageComponent } from './chuck-norris-page/chuck-norris-page.component';
 import { QuoteitemComponent } from './quoteitem/quoteitem.component';
 
+import { CharactersService } from './characters.service';
+
 const routes: Routes = [
   { path: 'quotes', component: QuoteListComponent },
 
@@ -51,7 +53,7 @@ const routes: Routes = [
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [CharactersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

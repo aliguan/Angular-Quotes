@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContactListComponent } from './contact-list.component';
+import { Router } from '@angular/router';
+
+import { CharacterService } from './characters.service';
 
 describe('ContactListComponent', () => {
   let component: ContactListComponent;
