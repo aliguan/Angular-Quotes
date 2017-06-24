@@ -12,6 +12,7 @@ import { ContactListComponent } from './contact-list/contact-list.component';
 import { ContactComponent } from './contact/contact.component';
 import { CountersComponent } from './counters/counters.component';
 import { ChuckNorrisPageComponent } from './chuck-norris-page/chuck-norris-page.component';
+import { QuoteitemComponent } from './quoteitem/quoteitem.component';
 
 const routes: Routes = [
   { path: 'quotes', component: QuoteListComponent },
@@ -41,7 +42,8 @@ const routes: Routes = [
     ContactListComponent,
     ContactComponent,
     CountersComponent,
-    ChuckNorrisPageComponent
+    ChuckNorrisPageComponent,
+    QuoteitemComponent
   ],
   imports: [
     BrowserModule,
