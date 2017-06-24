@@ -6,19 +6,38 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { QuoteListComponent } from './quote-list/quote-list.component';
-import { MyHomeComponentComponent } from './my-home-component/my-home-component.component';
-import { MyAboutComponentComponent } from './my-about-component/my-about-component.component';
+import { MyHomeComponent } from './my-home-component/my-home-component.component';
+import { MyAboutComponent } from './my-about-component/my-about-component.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { ContactComponent } from './contact/contact.component';
 import { CountersComponent } from './counters/counters.component';
 import { ChuckNorrisPageComponent } from './chuck-norris-page/chuck-norris-page.component';
 
+const routes: Routes = [
+  { path: 'quotes', component: QuoteListComponent },
+
+  { path: 'home', component: MyHomeComponent },
+
+  { path: 'about', component: MyAboutComponent },
+
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+
+  { path: 'contacts', component: ContactListComponent },
+
+  { path: 'contact/:id', component: ContactComponent },
+
+  { path: 'counters', component: CountersComponent },
+
+  { path: 'chuck', component: ChuckNorrisPageComponent },
+
+]
+
 @NgModule({
   declarations: [
     AppComponent,
     QuoteListComponent,
-    MyHomeComponentComponent,
-    MyAboutComponentComponent,
+    MyHomeComponent,
+    MyAboutComponent,
     ContactListComponent,
     ContactComponent,
     CountersComponent,
@@ -28,6 +47,7 @@ import { ChuckNorrisPageComponent } from './chuck-norris-page/chuck-norris-page.
     BrowserModule,
     FormsModule,
     HttpModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
