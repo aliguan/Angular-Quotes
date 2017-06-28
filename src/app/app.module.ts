@@ -14,9 +14,12 @@ import { CountersComponent } from './counters/counters.component';
 import { ChuckNorrisPageComponent } from './chuck-norris-page/chuck-norris-page.component';
 import { QuoteitemComponent } from './quoteitem/quoteitem.component';
 
-import { CharactersService } from './characters.service';
+
 import { MyCounterComponent } from './my-counter/my-counter.component';
 import { MySecondCounterComponent } from './my-second-counter/my-second-counter.component';
+
+import { CharactersService } from './characters.service';
+import { CounterService } from './counter.service';
 
 const routes: Routes = [
   { path: 'quotes', component: QuoteListComponent },
@@ -57,7 +60,7 @@ const routes: Routes = [
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [CharactersService],
+  providers: [CharactersService, CounterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
