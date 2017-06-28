@@ -15,6 +15,8 @@ import { ChuckNorrisPageComponent } from './chuck-norris-page/chuck-norris-page.
 import { QuoteitemComponent } from './quoteitem/quoteitem.component';
 
 import { CharactersService } from './characters.service';
+import { MyCounterComponent } from './my-counter/my-counter.component';
+import { MySecondCounterComponent } from './my-second-counter/my-second-counter.component';
 
 const routes: Routes = [
   { path: 'quotes', component: QuoteListComponent },
@@ -45,7 +47,9 @@ const routes: Routes = [
     ContactComponent,
     CountersComponent,
     ChuckNorrisPageComponent,
-    QuoteitemComponent
+    QuoteitemComponent,
+    MyCounterComponent,
+    MySecondCounterComponent
   ],
   imports: [
     BrowserModule,
